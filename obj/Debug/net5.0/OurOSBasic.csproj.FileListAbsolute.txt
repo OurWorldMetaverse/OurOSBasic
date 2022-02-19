@@ -39,5 +39,5 @@ D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\bin\Debug\net5.0\System.Managemen
 D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\System.Management.dll
 D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\bin\Debug\net5.0\Xwt.Gtk3.dll.config
 D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\bin\Debug\net5.0\Xwt.dll
-D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\obj\Debug\net5.0\OurOSBasic.O_OS_Kernel.ACK.Resources.ACKCommands.resources
-D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\obj\Debug\net5.0\OurOSBasic.csproj.GenerateResource.cache
+D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\bin\Debug\net5.0\RestSharp.dll

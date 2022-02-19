@@ -56,24 +56,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="107.3.0" />
     <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="6.0.0" />
     <PackageReference Include="System.Management" Version="6.0.0" />
     <PackageReference Include="Xwt.Gtk3" Version="0.2.251" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="O_OS-Kernel\ACK\Resources\ACKCommands.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>ACKCommands.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="O_OS-Kernel\ACK\Resources\ACKCommands.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ACKCommands.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
