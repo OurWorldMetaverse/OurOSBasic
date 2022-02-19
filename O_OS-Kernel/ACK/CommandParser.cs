@@ -6,45 +6,60 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Net.Http;
+using System.Net.Http.Json;
 using System.Web;
-using System.Net;
-using Newtonsoft.Json;
-using RestSharp;
-using RestSharp.Authenticators;
-using RestSharp.Extensions;
 
 namespace OurOSBasic.O_OS_Kernel.ACK
 {
-    internal class Commands
-    {
-        public string Command { get; set; }
-        public short Response { get; set; }
 
-        public override string ToString()
-        {
-            return $"{Command,20}: {Response} contributions";
-        }
+
+    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
+    public class Commands
+    {
+        public string ping { get; set; }
+        public string isaiah { get; set; }
     }
+
+    public class Root
+    {
+        public List<string> exclude { get; set; }
+        public Commands Commands { get; set; }
+    }
+
+
 
 
     class CommandParser
     {
-        private static System.Text.Json.JsonElement root;
-        private static System.Text.Json.JsonElement.ArrayEnumerator elems;
+        public static Root root = new();
 
-        public static async void CommandParserFunc()
+        public static async Task CommandParserFunc()
         {
-            var client = new RestClient("https://github.com");
+            while (!O_OS_Kernel.Kernel.isRunning)
+            {
+                await GetCommandAPI();
 
-            var request = new RestRequest("OurWorldMetaverse/OurOSBasic/blob/main/O_OS-Kernel/ACK/Resources/ACKCommands.json", Method.Get);
-            // Add HTTP headers
-            request.AddHeader("User-Agent", "Nothing");
+                if (Console.ReadLine() == "ping".ToLower())
+                {
+                    Console.WriteLine("[ISAIAH'S EDITION]: " + root.Commands.ping);
+                }
+                else if(Console.ReadLine() == "isaiah".ToLower())
+                {
+                    Console.WriteLine("[ISAIAH'S EDITION]: " + root.Commands.isaiah)
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("[ISAIAH'S EDITION]: UNKNOWN COMMAND");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+            }
+        }
 
-            // Execute the request and automatically deserialize the result.
-            var contributors = client.ExecuteAsync<List<Commands>>(request);
-            Console.Write(contributors.Result.Data);
-
-
+        public static async Task GetCommandAPI()
+        {
+            using var httpClient = new HttpClient();
+            root = await httpClient.GetFromJsonAsync<Root>("https://raw.githubusercontent.com/OurWorldMetaverse/OurOSBasic/main/O_OS-Kernel/ACK/Resources/ACKCommands.json");
         }
 
     }

@@ -6,20 +6,28 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Net.Http;
+using System.Net.Http.Json;
 using OurOSBasic.O_OS_Kernel;
 
 namespace OurOSBasic.O_OS_Kernel
 {
+
     class Kernel
     {
-        public static bool isRunning = false;
+        public static bool isRunning;
 
-        public static void Main()
+        public static async Task Main()
         {
             O_OS_Boot.BootKernel.Boot();
             Thread.Sleep(3000);
             Initialize();
-            ACK.CommandParser.CommandParserFunc();
+            CommandListenerImpl();
+            await CommandListenerImpl();
+        }
+
+        public static async Task CommandListenerImpl()
+        {
+            await O_OS_Kernel.ACK.CommandParser.CommandParserFunc();
         }
 
         public static async void Initialize()
