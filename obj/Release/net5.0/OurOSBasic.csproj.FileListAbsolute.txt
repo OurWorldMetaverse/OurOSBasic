@@ -37,3 +37,7 @@ D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\obj\Release\net5.0\ref\OurOSBasic
 D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\obj\Release\net5.0\OurOSBasic.pdb
 D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\obj\Release\net5.0\OurOSBasic.genruntimeconfig.cache
 D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\obj\Release\net5.0\OurOSBasic.csproj.AssemblyReference.cache
+D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\bin\Release\net5.0\Xwt.Gtk3.dll.config
+D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\bin\Release\net5.0\Newtonsoft.Json.dll
+D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\bin\Release\net5.0\RestSharp.dll
+D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\bin\Release\net5.0\Xwt.dll

@@ -93,24 +93,22 @@ namespace OurOSBasic.O_OS_Boot
         {
             float tempBootCode = AvailableRamMB + AvailableStorage / 2;
 
-            if(tempBootCode <= 253445)
+            if(tempBootCode > 5010)
             {
                 BootSuccess = true;
                 return 051;
-                LoadKernel();
-                O_OS_Kernel.Kernel.isRunning = true;
             }
-            else if(tempBootCode < 253445)
+            else if(tempBootCode < 5010)
             {
                 BootSuccess = false;
                 return 150;
-                O_OS_Kernel.Kernel.isRunning = false;
+                Resources.KernelVars.isRunning = false;
             }
             else
             {
                 BootSuccess = false;
                 return 500;
-                O_OS_Kernel.Kernel.isRunning = false;
+                Resources.KernelVars.isRunning = false;
             }
         }
 
@@ -122,6 +120,7 @@ namespace OurOSBasic.O_OS_Boot
             {
                 BootCodeStr = "BOOT CODE: BOOT SUCCESS " + "(" + CalcBootCode() + ")";
                 Console.WriteLine(BootCodeStr);
+                Resources.KernelVars.isRunning = true;
             }
             else if (CalcBootCode() == 150)
             {
@@ -140,11 +139,6 @@ namespace OurOSBasic.O_OS_Boot
         {
             Console.BackgroundColor = ConsoleColor.Gray;
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-        }
-
-        public static void LoadKernel()
-        {
-            O_OS_Kernel.Kernel.Initialize();
         }
 
         //Changes the bg to black, the foreground to green, prints "Boot Completed...", and changed the foreground back to white.

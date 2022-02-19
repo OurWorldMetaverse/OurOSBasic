@@ -10,6 +10,7 @@
 
     "Commands": {
         "ping": "pong",
-        "isaiah": "Isaiah is the Head of 3D Modeling at OurWorld"
+        "isaiah": "Isaiah is the Head of 3D Modeling at OurWorld",
+        "clear": ""
     }
 }

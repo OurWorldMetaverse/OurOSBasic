@@ -31,27 +31,30 @@ namespace OurOSBasic.O_OS_Kernel.ACK
 
     class CommandParser
     {
-        public static Root root = new();
+        private static Root root = new();
+        private const string ping = "ping";
+        private const string isaiah = "isaiah";
 
         public static async Task CommandParserFunc()
         {
-            while (!O_OS_Kernel.Kernel.isRunning)
+            await GetCommandAPI();
+            while (Resources.KernelVars.isRunning == true)
             {
                 await GetCommandAPI();
-
-                if (Console.ReadLine() == "ping".ToLower())
+                Console.Write("[Usr]: ");
+                switch (Console.ReadLine())
                 {
-                    Console.WriteLine("[ISAIAH'S EDITION]: " + root.Commands.ping);
-                }
-                else if(Console.ReadLine() == "isaiah".ToLower())
-                {
-                    Console.WriteLine("[ISAIAH'S EDITION]: " + root.Commands.isaiah);
-                }
-                else
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("[ISAIAH'S EDITION]: UNKNOWN COMMAND");
-                    Console.ForegroundColor = ConsoleColor.White;
+                    case ping:
+                        Console.WriteLine("[CMP]: " + root.Commands.ping);
+                        break;
+                    case isaiah:
+                        Console.WriteLine("[CMP]: " + root.Commands.isaiah);
+                        break;
+                    default:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("[CMP]: " + "ERROR INVALID COMMAND");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        break;
                 }
             }
         }

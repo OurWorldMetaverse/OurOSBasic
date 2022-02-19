@@ -14,14 +14,12 @@ namespace OurOSBasic.O_OS_Kernel
 
     class Kernel
     {
-        public static bool isRunning;
 
         public static async Task Main()
         {
             O_OS_Boot.BootKernel.Boot();
             Thread.Sleep(3000);
             Initialize();
-            CommandListenerImpl();
             await CommandListenerImpl();
         }
 
@@ -30,7 +28,7 @@ namespace OurOSBasic.O_OS_Kernel
             await O_OS_Kernel.ACK.CommandParser.CommandParserFunc();
         }
 
-        public static async void Initialize()
+        public static void Initialize()
         {
             Console.BackgroundColor = ConsoleColor.DarkCyan;
             Console.ForegroundColor = ConsoleColor.White;
