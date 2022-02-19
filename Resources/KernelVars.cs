@@ -8,6 +8,13 @@ namespace OurOSBasic.Resources
 {
     class KernelVars
     {
+        //Is the OS running
         public static bool isRunning;
+
+        //Command instances
+        public const string ping = "ping";
+        public const string isaiah = "isaiah";
+        public const string clear = "clear";
+
     }
 }

@@ -14,55 +14,41 @@ namespace OurOSBasic.O_OS_Kernel.ACK
 
 
     // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
-    public class Commands
-    {
-        public string ping { get; set; }
-        public string isaiah { get; set; }
-    }
-
-    public class Root
-    {
-        public List<string> exclude { get; set; }
-        public Commands Commands { get; set; }
-    }
 
 
 
 
     class CommandParser
     {
-        private static Root root = new();
-        private const string ping = "ping";
-        private const string isaiah = "isaiah";
 
         public static async Task CommandParserFunc()
         {
-            await GetCommandAPI();
+            await Resources.LLFuncs.GetCommandAPI();
             while (Resources.KernelVars.isRunning == true)
             {
-                await GetCommandAPI();
-                Console.Write("[Usr]: ");
+                await Resources.LLFuncs.GetCommandAPI();
                 switch (Console.ReadLine())
                 {
-                    case ping:
-                        Console.WriteLine("[CMP]: " + root.Commands.ping);
+                    case Resources.KernelVars.ping:
+                        Console.WriteLine("[CMP]: " + Resources.LLFuncs.root.Commands.ping);
+                        Console.Write("[Usr]: ");
                         break;
-                    case isaiah:
-                        Console.WriteLine("[CMP]: " + root.Commands.isaiah);
+                    case Resources.KernelVars.isaiah:
+                        Console.WriteLine("[CMP]: " + Resources.LLFuncs.root.Commands.isaiah);
+                        Console.Write("[Usr]: ");
+                        break;
+                    case Resources.KernelVars.clear:
+                        Resources.ACKCommandFuncs.Clear();
+                        Console.Write("[Usr]: ");
                         break;
                     default:
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("[CMP]: " + "ERROR INVALID COMMAND");
                         Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("[Usr]: ");
                         break;
                 }
             }
-        }
-
-        public static async Task GetCommandAPI()
-        {
-            using var httpClient = new HttpClient();
-            root = await httpClient.GetFromJsonAsync<Root>("https://raw.githubusercontent.com/OurWorldMetaverse/OurOSBasic/main/O_OS-Kernel/ACK/Resources/ACKCommands.json");
         }
 
     }
