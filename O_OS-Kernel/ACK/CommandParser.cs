@@ -45,7 +45,7 @@ namespace OurOSBasic.O_OS_Kernel.ACK
                 }
                 else if(Console.ReadLine() == "isaiah".ToLower())
                 {
-                    Console.WriteLine("[ISAIAH'S EDITION]: " + root.Commands.isaiah)
+                    Console.WriteLine("[ISAIAH'S EDITION]: " + root.Commands.isaiah);
                 }
                 else
                 {

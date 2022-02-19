@@ -63,4 +63,8 @@
     <PackageReference Include="Xwt.Gtk3" Version="0.2.251" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="O_OS-Kernel\ACK\ACK_Commands\" />
+  </ItemGroup>
+
 </Project>
