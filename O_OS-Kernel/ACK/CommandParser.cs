@@ -38,7 +38,11 @@ namespace OurOSBasic.O_OS_Kernel.ACK
                         Console.Write("[Usr]: ");
                         break;
                     case Resources.KernelVars.clear:
-                        Resources.ACKCommandFuncs.Clear();
+                        await Resources.ACKCommandFuncs.Clear();
+                        Console.Write("[Usr]: ");
+                        break;
+                    case Resources.KernelVars.duggo:
+                        await Resources.ACKCommandFuncs.Duggo();
                         Console.Write("[Usr]: ");
                         break;
                     default:

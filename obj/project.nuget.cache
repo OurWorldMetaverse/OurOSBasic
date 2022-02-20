@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kz3tx9GuDm1qaluSZvXnk6BTB/nbtAz3nnMQF5efAgLV1gbKEA76ibZ3DmoJDsEunQHPLGpcWRUiY4uoxLwy9g==",
+  "dgSpecHash": "KmdpHd7PKb0gS29NR23Lx7eCL1ZT2dsk30zGNN2iSjHtcQurqc6of1Wb1wTQUs1SAa63pGTeHvSH0Eq7IF5MfA==",
   "success": true,
   "projectFilePath": "D:\\OS Dev\\OurOS Basic C#\\OurOSBasic\\OurOSBasic\\OurOSBasic.csproj",
   "expectedPackageFiles": [
@@ -28,10 +28,10 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Xwt 0.2.251' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Xwt 0.2.251' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "Xwt",
       "targetGraphs": [
-        "net5.0"
+        "net5.0-windows7.0"
       ]
     }
   ]

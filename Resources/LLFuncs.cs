@@ -13,6 +13,11 @@ namespace OurOSBasic.Resources
     {
         public string ping { get; set; }
         public string isaiah { get; set; }
+        public string duggo { get; set; }
+        public string aidyn { get; set; }
+        public string magnet { get; set; }
+        public string upshot { get; set; }
+        public string fakemathew { get; set; }
         public string clear { get; set; }
     }
 
