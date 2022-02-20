@@ -43,3 +43,4 @@ D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\obj\Debug\net5.0-windows\OurOSBas
 D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\obj\Debug\net5.0-windows\OurOSBasic.genruntimeconfig.cache
 D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\obj\Debug\net5.0-windows\OurOSBasic.Properties.Resources.resources
 D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\obj\Debug\net5.0-windows\OurOSBasic.csproj.GenerateResource.cache
+D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\obj\Debug\net5.0-windows\OurOSBasic.Resources.Forms.BabushkaDuggo.resources

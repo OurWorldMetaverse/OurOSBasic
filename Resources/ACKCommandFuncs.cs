@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Net;
+using System.Web;
+using System.IO;
+using System.Threading;
 
 
 namespace OurOSBasic.Resources
 {
     class ACKCommandFuncs
     {
+        private static byte[] dataArr;
+        public static Form BabushkaDoggo;
+
         public static async Task Clear()
         {
             Console.WriteLine("[CMP]: " + LLFuncs.root.Commands.clear);
@@ -19,9 +26,14 @@ namespace OurOSBasic.Resources
         }
         public static async Task Duggo()
         {
-            Image BabushkaDog = Image.FromFile("./Img/Babushka Dog.jpg");
-            Console.WriteLine(BabushkaDog.Size);
+            Form BabushkaDoggo = new Forms.BabushkaDuggo();
+            BabushkaDoggo.Text = "Babushka Duggo";
+            BabushkaDoggo.BackgroundImage = Image.FromFile(@"D:\Resources\BabushkaDoggo.jpg");
+            BabushkaDoggo.Show();
             Console.WriteLine("[CMP]: " + LLFuncs.root.Commands.duggo);
+            Thread.Sleep(2000);
+            BabushkaDoggo.Dispose();
         }
+
     }
 }

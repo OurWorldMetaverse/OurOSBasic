@@ -3,4 +3,9 @@
   <PropertyGroup>
     <_LastSelectedProfileId>D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Resources\Forms\BabushkaDuggo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
 </Project>
