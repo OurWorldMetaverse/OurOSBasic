@@ -4,7 +4,10 @@
     <_LastSelectedProfileId>D:\OS Dev\OurOS Basic C#\OurOSBasic\OurOSBasic\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="Resources\Forms\BabushkaDuggo.cs">
+    <Compile Update="Resources\Forms\BabushkaDoggo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Resources\Forms\Kermit.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

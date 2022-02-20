@@ -45,6 +45,18 @@ namespace OurOSBasic.O_OS_Kernel.ACK
                         await Resources.ACKCommandFuncs.Duggo();
                         Console.Write("[Usr]: ");
                         break;
+                    case Resources.KernelVars.aidyn:
+                        await Resources.ACKCommandFuncs.Aidyn();
+                        Console.Write("[Usr]: ");
+                        break;
+                    case Resources.KernelVars.upshot:
+                        await Resources.ACKCommandFuncs.upshot();
+                        Console.Write("[Usr]: ");
+                        break;
+                    case Resources.KernelVars.fakemath:
+                        await Resources.ACKCommandFuncs.FakeMath();
+                        Console.Write("[Usr]: ");
+                        break;
                     default:
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("[CMP]: " + "ERROR INVALID COMMAND");

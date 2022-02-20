@@ -1,7 +1,7 @@
 ﻿
 namespace OurOSBasic.Resources.Forms
 {
-    partial class BabushkaDuggo
+    partial class BabushkaDoggo
     {
         /// <summary>
         /// Required designer variable.
@@ -31,13 +31,13 @@ namespace OurOSBasic.Resources.Forms
         {
             this.SuspendLayout();
             // 
-            // BabushkaDuggo
+            // BabushkaDoggo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 834);
-            this.Name = "BabushkaDuggo";
-            this.Text = "BabushkaDuggo";
+            this.ClientSize = new System.Drawing.Size(800, 758);
+            this.Name = "BabushkaDoggo";
+            this.Text = "BabushkaDoggo";
             this.ResumeLayout(false);
 
         }

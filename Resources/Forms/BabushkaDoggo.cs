@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OurOSBasic.Resources.Forms
 {
-    public partial class BabushkaDuggo : Form
+    public partial class BabushkaDoggo : Form
     {
-        public BabushkaDuggo()
+        public BabushkaDoggo()
         {
             InitializeComponent();
         }
